@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javed Nihari Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barriecito&family=DynaPuff:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+        <link rel="icon" type="image/x-icon" href="./Images/jn logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Ubuntu", serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            background: url(./Images/Javed\ nihari\ background.jpg) center/cover no-repeat fixed;
+        }
+
+        div.top {
+            background-color: #f29d13;
+            max-width: 100vw;
+            min-height: 4vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+        }
+
+
+
+        .chat a img {
+            max-width: 4rem;
+            z-index: 50000;
+            position: fixed;
+            right: 60px;
+            bottom: 50px;
+        }
+
+        .chat a img:hover {
+            transform: scale(1.08);
+            /* Slightly enlarge the item on hover */
+            cursor: pointer;
+            transition: transform 0.8s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effects */
+            filter: invert(10%);
+        }
+
+        .btn {
+            min-width: 150px;
+            max-width: 200px;
+            min-height: 40px;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #f29d13;
+            align-items: center;
+            color: white;
+            background-color: #f29d13;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 4px;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            /* Slightly enlarge the item on hover */
+            cursor: pointer;
+            transition: transform 0.8s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effects */
+
+        }
+
+        div.second {
+            min-width: 100%;
+            max-height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+
+
+        }
+
+        div.second img {
+            max-width: 15px;
+            margin: 8px;
+
+
+        }
+
+        #one div.branch {
+
+            margin: 3px;
+            text-align: center;
+        }
+
+        #two .cell {
+            display: flex;
+            margin: 3px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #two .cell img {
+            width: 130px;
+
+        }
+
+        .second .btn .loc img {
+            width: 11px;
+            filter: invert(100%);
+            font-weight: 900;
+        }
+
+        div.logo {
+            position: absolute;
+            left: 50%;
+            /* Move to the center */
+            top: 2.5%;
+            transform: translateX(-50%);
+            /* Center precisely */
+        }
+
+        div.logo img {
+            min-width: 10rem;
+            display: flex;
+
+        }
+
+        div.slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+
+        }
+
+        div.slide img {
+            width: 100%;
+            max-height: 700px;
+        }
+
+        .navbar {
+            background-color: #f29d13;
+            max-width: 100vw;
+            height: 8vh;
+            margin-top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 18px;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Light shadow */
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 4px;
+            padding: 6px;
+            gap: 30px;
+            font-family: "Ubuntu", serif;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+
+            border-radius: 7px;
+            padding: 10px 14px;
+
+        }
+
+        .navbar ul li a:hover {
+            color: #f29d13;
+            background-color: black;
+
+        }
+
+        .navbar ul li a:active {
+            color: #f29d13;
+            background-color: black;
+
+        }
+
+
+        .searchbar {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100vw;
+            margin-top: 32px;
+
+
+
+
+        }
+
+        .searchbar input {
+            width: 60vw;
+            border: 1px solid #f29d13;
+            background-color: white;
+
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 15px;
+            color: #f29d13;
+        }
+
+        /* Placeholder style */
+        input::placeholder {
+            color: #f29d13;
+            /* Change placeholder font color */
+
+            font-size: 16px;
+            /* Set font size */
+        }
+
+
+
+        .body-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body-image img {
+            width: 60vw;
+            height: auto;
+            margin-top: 50px;
+            border-radius: 18px;
+        }
+
+        div.container {
+            display: flex;
+            /* Aligns items horizontally */
+
+
+            align-items: flex-start;
+            /* Centers items vertically */
+            width: 60vw;
+            /* Fixed width as per your design */
+
+            margin: 28px auto;
+            /* Center horizontally */
+            padding: 0px;
+            /* Optional: Adds some space inside the container */
+            gap: 35px;
+            /* Adds space between rows and columns */
+            flex-wrap: wrap;
+
+
+        }
+
+        .container .item {
+            display: flex;
+            /* Enable flexbox for centering */
+            flex-direction: column;
+            /* Arrange content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            justify-content: center;
+            /* Center content vertically */
+            /* border: 1px solid rgb(238, 225, 225); */
+            border-radius: 15px;
+            min-width: 200px;
+            max-width: 260px;
+            padding: 20px;
+            /* Optional: Add padding for spacing */
+            text-align: center;
+            /* Center text */
+
+            min-height: 40vh;
+            max-height: 55vh;
+
+            overflow: hidden;
+            background-color: white;
+            /* Add a subtle shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Slightly rounded shadow */
+
+        }
+
+        .container .item:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Larger shadow on hover */
+            transform: scale(1.08);
+            /* Slightly enlarge the item on hover */
+            cursor: pointer;
+            transition: transform 0.8s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effects */
+            border: 2.5px solid #f29d13;
+            background-color: rgb(255, 240, 216);
+        }
+
+        .container .item img {
+            min-width: 150px;
+            height: 300px;
+            z-index: 4;
+            overflow: hidden;
+
+
+
+        }
+
+        div.price {
+            margin-top: 68px;
+
+        }
+
+        div.price .btn {
+            border-radius: 50px;
+            margin-top: 12px;
+
+        }
+
+        div.price h5 {
+            color: #f29d13;
+
+        }
+
+
+        div.item h3 {
+            margin-top: 20px;
+
+        }
+
+        /* div p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 20px;
+            background-color: white;
+            position: relative;
+            left: 0;
+            right: 0;
+            width: 100%;
+    height: 100px;
+        } */
+
+
+        
+        footer{
+            display: flex;
+            
+          
+        }
+        
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+  
+    padding: 0;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+}
+
+footer ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li a{
+ 
+ color: white;
+ margin: 0px 7px;
+}
+        
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="top">Celebrating the New Year with hope and solidarity for Palestine</div>
+
+
+    </header>
+    <div class="chat">
+        <a href="">
+
+            <img src="./Images/whatsapp logo.png" alt="">
+        </a>
+    </div>
+
+    <div class="second">
+        <button class="btn" id="one">
+            <div class="loc"><img src="./Images/loc.png" alt=""></div>
+            <div class="branch">
+                <h3>Karachi</h3>
+                <h5>Change Branch</h5>
+            </div>
+        </button>
+
+        <button class="btn" id="two">
+            <div class="cell">
+                <div><img src="./Images/phone-call.png" alt=""></div>
+                <div>
+                    <h4>021558556</h4>
+                </div>
+            </div>
+
+        </button>
+
+        <div class="logo">
+            <img src="./Images/jn logo.png" alt="">
+        </div>
+
+    </div>
+
+
+    <div class="slide"><img src="./Images/JN image1.png" alt=""></div>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="">Nihari</a></li>
+            <li><a href="">Haleem</a></li>
+            <li><a href="">Biryani Pulao</a></li>
+            <li><a href="">Tandoor</a></li>
+            <li><a href="">Sweet Dishes</a></li>
+            <li><a href="">Soft Drink</a></li>
+            <li><a href="">Tin Pack</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="searchbar">
+
+        <form action="">
+            <input type="search" placeholder="Search for item by title...">
+        </form>
+
+    </div>
+
+    <div class="body-image">
+        <img src="./Images/JN image3.png" alt="">
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+
+            <img src="./Images/Nihari.png" alt="">
+            <h3>Nihari</h3>
+            <div class="price">
+                <h5>From Rs. 550</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/nalli nihari.png" alt="">
+            <h3>Nalli Nihari</h3>
+            <div class="price">
+                <h5>From Rs. 900</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+
+
+        <div class="item">
+            <img src="./Images/Maghaz Nihari.png" alt="">
+            <h3>Maghaz Nihari</h3>
+            <div class="price">
+                <h5>From Rs. 950</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="./Images/Special Nihari.png" alt="">
+            <h3>Special Nihari</h3>
+            <div class="price">
+                <h5>From Rs. 1400</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="./Images/Nihari Bong.png" alt="">
+            <h3>Nihari Bong</h3>
+            <div class="price">
+                <h5>From Rs. 2000</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="body-image">
+        <img src="./Images/Haleem.png" alt="">
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+
+            <img src="./Images/Chicken Haleem.png" alt="">
+            <h3>Haleem</h3>
+            <div class="price">
+                <h5>From Rs. 200</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/Beef Haleem.png" alt="">
+            <h3>Beef</h3>
+            <div class="price">
+                <h5>From Rs. 200</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="body-image">
+        <img src="./Images/Biryani & Pulao.png" alt="">
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+
+            <img src="./Images/Chicken Biryani.png" alt="">
+            <h3>Chicken Biryani</h3>
+            <div class="price">
+                <h5>From Rs. 300</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/Chicken Pulao.png" alt="">
+            <h3>Chicken Pulao</h3>
+            <div class="price">
+                <h5>From Rs. 300</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="body-image">
+        <img src="./Images/Tandoor.png" alt="">
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+
+            <img src="./Images/Dhoodh Wali Roti.png" alt="">
+            <h3>Doodh Wali Roti</h3>
+            <div class="price">
+                <h5>From Rs. 50</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/Tandoori Roti.png" alt="">
+            <h3>Roti</h3>
+            <div class="price">
+                <h5>From Rs. 30</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+
+            <img src="./Images/Sheermal.png" alt="">
+            <h3>Sheermal</h3>
+            <div class="price">
+                <h5>From Rs. 100</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/Taftan.png" alt="">
+            <h3>Taftan</h3>
+            <div class="price">
+                <h5>From Rs. 100</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="body-image">
+            <img src="./Images/Sweet Dishes.png" alt="">
+        </div>
+
+
+
+
+        <div class="item">
+            <img src="./Images/Rabri.png" alt="">
+            <h3>Single Rabri</h3>
+            <div class="price">
+                <h5>From Rs. 200</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="item">
+
+            <img src="./Images/Kheer.png" alt="">
+            <h3>Kheer</h3>
+            <div class="price">
+                <h5>From Rs. 100</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="item">
+            <img src="./Images/Kheer.png" alt="">
+            <h3>Kheer</h3>
+            <div class="price">
+                <h5>From Rs. 180</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+
+            <img src="./Images/Rabri.png" alt="">
+            <h3>Rabri</h3>
+            <div class="price">
+                <h5>From Rs. 700</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="body-image">
+            <img src="./Images/Soft Drink.png" alt="">
+        </div>
+
+
+
+        <div class="item">
+            <img src="./Images/Cola Next.png" alt="">
+            <h3>Can</h3>
+            <div class="price">
+                <h5>From Rs. 100</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="item">
+
+            <img src="./Images/Pakola.png" alt="">
+            <h3>Water</h3>
+            <div class="price">
+                <h5>From Rs. 50</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="body-image">
+            <img src="./Images/Tin Pack.png" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Images/Nihari Can.png" alt="">
+            <h3>Nihari Can</h3>
+            <div class="price">
+                <h5>From Rs. 1500</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="item">
+
+            <img src="./Images/Beef Haleem Can.png" alt="">
+            <h3>Beef Haleem Can</h3>
+            <div class="price">
+                <h5>From Rs. 1200</h5>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div>
+            <p>Javed Nihari, with its decades of legacy, is a culinary institution in Karachi. Our restaurant has been
+                serving exquisite Nihari, a traditional Pakistani delicacy, for generations. Whether you're a
+                connoisseur of Nihari or new to this flavorful dish, Javed Nihari offers a wide variety of Nihari
+                options to tantalize your taste buds. Join us to savor the true essence of Nihari in the heart of
+                Karachi, where tradition and taste come together to create an unforgettable dining experience.</p>
+        </div>
+        
+
+        <footer>
+            
+                <ul>powered by
+                    <li><a href="">Indolj</a></li><span>|</span>
+                    <li><a href="">Privacy Policy </a></li><span>|</span>
+                    <li><a href="">Faqs</a></li>
+                </ul>
+       
+
+        </footer>
+</body>
