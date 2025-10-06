@@ -521,6 +521,7 @@ div.footer-top {
 @media (max-width: 576px) {
    .navbar {
     font-size: 10px;
+    height: 4vh;
   }
 
 
